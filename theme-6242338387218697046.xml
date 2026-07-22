@@ -375,12 +375,12 @@ html.loading .cp-fade{opacity:0;animation:cpFadeIn .3s ease .4s both;}
   max-width:100%;height:auto;
 }
 .cp-post-body h2,.cp-post-body h3,.cp-post-body h4{
-  font-family:var(--cp-font-serif);font-weight:700;letter-spacing:-.01em;color:var(--cp-text);
-  scroll-margin-top:90px;position:relative;
+  font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;font-weight:800;letter-spacing:0;color:#222;
+  scroll-margin-top:90px;position:relative;word-break:keep-all;
 }
-.cp-post-body h2{font-size:25px;margin:46px 0 18px;padding-bottom:12px;border-bottom:2.5px solid var(--cp-text);}
-.cp-post-body h3{font-size:21px;margin:36px 0 14px;padding-left:14px;border-left:4px solid var(--cp-accent);}
-.cp-post-body h4{font-size:18px;margin:28px 0 12px;color:var(--cp-accent-dark);}
+.cp-post-body h2{display:flex;align-items:center;gap:10px;font-size:21px;margin:24px 0 14px;padding-bottom:10px;border-bottom:3px solid #222;}
+.cp-post-body h3{font-size:21px;margin:24px 0 14px;padding-bottom:10px;border-bottom:3px solid #222;padding-left:0;border-left:0;}
+.cp-post-body h4{font-size:18px;margin:24px 0 12px;color:#222;}
 .cp-post-body h2:first-child,.cp-post-body h3:first-child{margin-top:0;}
 /* class가 붙은 링크(사용자가 삽입한 버튼/카드형 위젯 등)는 테마 기본 링크 밑줄에서 제외해
    본문에 붙여넣는 커스텀 스니펫의 버튼 디자인이 항상 우선 적용되도록 한다. */
@@ -413,28 +413,22 @@ html.loading .cp-fade{opacity:0;animation:cpFadeIn .3s ease .4s both;}
    테마의 강제 표 스타일에서 제외한다. 그래야 사용자가 본문에 붙여넣는
    자체 디자인 테이블(class="xxxx-table" 형태)이 테마 기본 표 스타일과
    충돌하지 않는다. */
-.cp-post-body .cp-table-wrap{overflow-x:auto;margin:26px 0;border-radius:var(--cp-radius-md);border:1px solid var(--cp-border);max-width:100%;-webkit-overflow-scrolling:touch;}
+.cp-post-body .cp-table-wrap{overflow-x:auto;margin:24px 0;border-radius:8px;border:1px solid #e0ddd4;max-width:100%;-webkit-overflow-scrolling:touch;}
 .cp-post-body table:not([class]){
-  display:block;
-  width:100%;
+  width:auto;
   max-width:100%;
   overflow-x:auto;
   -webkit-overflow-scrolling:touch;
   border-collapse:collapse;
-  font-size:14.5px;
-  margin:26px 0;
-  border-radius:var(--cp-radius-md);
-  border:1px solid var(--cp-border);
+  border:1px solid #e0ddd4;
+  border-radius:8px;
+  background:#fff;
+  margin:24px 0;
 }
 .cp-post-body .cp-table-wrap table:not([class]){margin:0;border:none;border-radius:0;}
-.cp-post-body table:not([class]) thead,.cp-post-body table:not([class]) tbody{display:table;width:100%;table-layout:auto;min-width:480px;}
-.cp-post-body table:not([class]) thead th{
-  background:var(--cp-text);color:#fff;font-weight:700;text-align:left;padding:12px 14px;white-space:nowrap;
-}
-.cp-post-body table:not([class]) td,.cp-post-body table:not([class]) th{padding:11px 14px;border-bottom:1px solid var(--cp-border);}
-.cp-post-body table:not([class]) tbody tr:last-child td{border-bottom:none;}
-.cp-post-body table:not([class]) tbody tr:nth-child(even){background:var(--cp-bg-alt);}
-.cp-post-body table:not([class]) tbody tr:hover{background:var(--cp-accent-soft);}
+.cp-post-body table:not([class]) thead,.cp-post-body table:not([class]) tbody{display:table;width:auto;max-width:100%;table-layout:auto;}
+.cp-post-body table:not([class]) thead th,.cp-post-body table:not([class]) th{background:#f5f0e4;color:#333;font-size:14px;font-weight:700;padding:14px 8px;border:1px solid #e8e4d8;text-align:center;line-height:1.5;}
+.cp-post-body table:not([class]) td{padding:16px 8px;border:1px solid #eeebe2;text-align:center;font-size:14px;color:#333;line-height:1.6;background:#fcfbf7;word-break:keep-all;}
 
 /* 사용자가 직접 삽입한 커스텀 위젯(class가 붙은 table)은 가로 스크롤만 보장하고
    나머지 디자인은 위젯 자체 CSS를 그대로 따르도록 최소한만 개입한다. */
@@ -461,15 +455,18 @@ html.loading .cp-fade{opacity:0;animation:cpFadeIn .3s ease .4s both;}
 
 /* ---- 테마 고유 버튼: 본문 중 "굵은 링크" 자동 버튼화 ---- */
 .cp-post-body p > a.cp-cta-btn,.cp-post-body p > b > a.cp-cta-btn,.cp-post-body p > strong > a.cp-cta-btn{
-  display:inline-flex;align-items:center;gap:8px;background:var(--cp-accent);color:#fff!important;
-  font-weight:800;font-size:15.5px;padding:13px 26px;border-radius:50px;text-decoration:none!important;
-  box-shadow:0 4px 14px rgba(36,87,197,.28);transition:.18s ease;margin:6px 0;
+  display:inline-block;background:#fdf3ee;color:#b3261e!important;font-size:14px;font-weight:800;letter-spacing:.3px;padding:7px 16px;border:1.5px solid #b3261e;border-radius:8px;box-shadow:0 2px 0 #b3261e;cursor:pointer;user-select:all;transition:transform .08s,box-shadow .08s;font-family:inherit;text-decoration:none!important;margin:6px 0;
 }
-.cp-post-body a.cp-cta-btn:hover{background:var(--cp-accent-dark);transform:translateY(-1px);box-shadow:0 6px 18px rgba(36,87,197,.35);}
-.cp-post-body a.cp-cta-btn::after{content:'\2192';font-size:15px;transition:.18s ease;}
-.cp-post-body a.cp-cta-btn:hover::after{transform:translateX(3px);}
+.cp-post-body a.cp-cta-btn:hover{text-decoration:none;background:#fdf3ee;color:#b3261e!important;}
+.cp-post-body a.cp-cta-btn:active{transform:translateY(2px);box-shadow:0 0 0 #b3261e;}
+.cp-post-body a.cp-cta-btn::after{content:none;}
 .cp-cta-btn-wrap{text-align:center;margin:30px 0;}
 .cp-cta-btn-wrap a.cp-cta-btn{margin:0;}
+@media (max-width:520px){
+.cp-post-body table:not([class]) th,.cp-post-body table:not([class]) td{font-size:12.5px;padding:12px 4px}
+.cp-post-body p > a.cp-cta-btn,.cp-post-body p > b > a.cp-cta-btn,.cp-post-body p > strong > a.cp-cta-btn{font-size:12.5px;padding:6px 10px}
+.cp-post-body h2,.cp-post-body h3{font-size:18px}
+}
 
 /* ---- 자동 목차 (TOC) ---- */
 .cp-toc{
