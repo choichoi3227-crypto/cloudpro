@@ -785,6 +785,12 @@ a{color:#1e73be;}a:hover{color:#000;text-decoration:none;}
 @media (max-width:980px){.cp-body-grid{grid-template-columns:1fr;padding:24px 15px 40px;}.cp-article{padding:30px;}.cp-article-title{font-size:34px;}}
 @media (max-width:520px){body{font-size:16px;}.cp-article{padding:24px 18px;}.cp-article-title{font-size:30px;}.cp-post-body h2{font-size:28px}.cp-post-body h3{font-size:24px}.cp-post-body h4{font-size:21px}.cp-post-body h5{font-size:18px}.cp-post-body h6{font-size:16px}.cp-post-body table:not([class]){display:block;overflow-x:auto;}.cp-post-body table:not([class]) th,.cp-post-body table:not([class]) td{font-size:14px;padding:10px 12px;}}
 
+
+/* 소제목 번호/텍스트 세로 정렬 보정 */
+.cp-post-body{counter-reset:cp-section;}
+.cp-post-body h2{counter-increment:cp-section;display:flex;align-items:center;gap:10px;}
+.cp-post-body h2::before{content:counter(cp-section)!important;display:inline-flex!important;align-items:center;justify-content:center;min-width:30px;height:30px;padding:0 8px;border:2px solid #222;border-radius:6px;font-size:17px;font-weight:800;line-height:1;color:#2eb872;background:#fff;box-sizing:border-box;flex:0 0 auto;}
+
 @media print{
   .cp-header,.cp-footer,.cp-side-col,.cp-share-row,.cp-back-to-top,.cp-post-nav,.cp-related,#comments,.cp-sticky-ad-mobile{display:none!important;}
 }
