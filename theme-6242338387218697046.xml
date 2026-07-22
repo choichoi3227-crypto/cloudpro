@@ -438,6 +438,25 @@ html.loading .cp-fade{opacity:0;animation:cpFadeIn .3s ease .4s both;}
    나머지 디자인은 위젯 자체 CSS를 그대로 따르도록 최소한만 개입한다. */
 .cp-post-body table[class]{width:100%;max-width:100%;overflow-x:auto;-webkit-overflow-scrolling:touch;}
 
+/* ---- 본문 할인 코드/쿠폰 표 위젯 ---- */
+.cp-post-body .dcode-wrap{max-width:100%;width:auto;margin:24px auto;font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif}
+.cp-post-body .dcode-titlebar{display:flex;align-items:center;gap:10px;border-bottom:3px solid #222;padding-bottom:10px;margin-bottom:14px}
+.cp-post-body .dcode-num{display:inline-flex;align-items:center;justify-content:center;min-width:30px;min-height:30px;width:auto;height:auto;padding:0 8px;border:2px solid #222;border-radius:6px;font-size:17px;font-weight:800;color:#2eb872;background:#fff;flex:0 0 auto}
+.cp-post-body .dcode-title{font-size:21px;font-weight:800;color:#222;margin:0}
+.cp-post-body .dcode-desc{font-size:14.5px;color:#1a3a5c;margin:0 0 16px;line-height:1.7;word-break:keep-all}
+.cp-post-body .dcode-table{width:auto;max-width:100%;border-collapse:collapse;border:1px solid #e0ddd4;border-radius:8px;overflow:hidden;background:#fff}
+.cp-post-body .dcode-table th{background:#f5f0e4;color:#333;font-size:14px;font-weight:700;padding:14px 8px;border:1px solid #e8e4d8;text-align:center;line-height:1.5}
+.cp-post-body .dcode-table td{padding:16px 8px;border:1px solid #eeebe2;text-align:center;font-size:14px;color:#333;line-height:1.6;background:#fcfbf7;word-break:keep-all}
+.cp-post-body .dcode-btn{display:inline-block;background:#fdf3ee;color:#b3261e !important;font-size:14px;font-weight:800;letter-spacing:.3px;padding:7px 16px;border:1.5px solid #b3261e;border-radius:8px;box-shadow:0 2px 0 #b3261e;cursor:pointer;user-select:all;transition:transform .08s,box-shadow .08s;font-family:inherit;text-decoration:none !important}
+.cp-post-body .dcode-btn:active{transform:translateY(2px);box-shadow:0 0 0 #b3261e}
+.cp-post-body .dcode-btn.dcode-copied{background:#2eb872;color:#fff !important;border-color:#1f8f57;box-shadow:0 2px 0 #1f8f57}
+.cp-post-body .dcode-hl{font-style:italic;font-weight:700;border-bottom:2px solid #f5c542}
+@media (max-width:520px){
+.cp-post-body .dcode-table th,.cp-post-body .dcode-table td{font-size:12.5px;padding:12px 4px}
+.cp-post-body .dcode-btn{font-size:12.5px;padding:6px 10px}
+.cp-post-body .dcode-title{font-size:18px}
+}
+
 /* ---- 테마 고유 버튼: 본문 중 "굵은 링크" 자동 버튼화 ---- */
 .cp-post-body p > a.cp-cta-btn,.cp-post-body p > b > a.cp-cta-btn,.cp-post-body p > strong > a.cp-cta-btn{
   display:inline-block;background:#fdf3ee;color:#b3261e!important;font-size:14px;font-weight:800;letter-spacing:.3px;padding:7px 16px;border:1.5px solid #b3261e;border-radius:8px;box-shadow:0 2px 0 #b3261e;cursor:pointer;user-select:all;transition:transform .08s,box-shadow .08s;font-family:inherit;text-decoration:none!important;margin:6px 0;
